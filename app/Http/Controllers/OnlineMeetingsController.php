@@ -108,7 +108,7 @@ class OnlineMeetingsController extends Controller
  
 }
 //return view('onlineMeeting', $viewData); 
-  return Redirect::to("onlineMeeting")->withSuccess('Great! Form successfully submit.');
+  return back()->with('success','Great! Form successfully submit.');
   //  return response($calendarEvent->getJoinUrl());
   }
 }

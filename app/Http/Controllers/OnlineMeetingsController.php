@@ -105,11 +105,10 @@ class OnlineMeetingsController extends Controller
   ->execute();
 } catch (\Exception $e) {
   print_r($e->getMessage());
-  die;
+ 
 }
 //return view('onlineMeeting', $viewData); 
-  var_dump($calendarEvent);
-  die;
+  return Redirect::to("onlineMeeting")->withSuccess('Great! Form successfully submit.');
   //  return response($calendarEvent->getJoinUrl());
   }
 }
